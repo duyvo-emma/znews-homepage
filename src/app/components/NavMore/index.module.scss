@@ -1,0 +1,42 @@
+.navMore {
+  &_fadeIn {
+    animation: fadeIn 0.3s;
+  }
+
+  &_fadeOut {
+    animation: fadeOut 0.3s;
+  }
+
+  &_item {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      margin-right: 8px;
+      -webkit-transform: skew(-20deg);
+      -khtml-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      transform: skew(-20deg);
+      background-color: #dd3333;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

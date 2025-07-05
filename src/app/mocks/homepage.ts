@@ -1,0 +1,215 @@
+const homepageData: HomePageProps = {
+  topBanner: {
+    tabs: [
+      { id: 'tab-1', title: 'FIFA Club World Cup 2025', link: '/fifa-club-world-cup-2025' },
+      {
+        id: 'tab-2',
+        title: 'Người nổi tiếng quảng cáo giả',
+        link: '/nguoi-noi-tieng-quang-cao-gia',
+      },
+      { id: 'tab-3', title: 'Sắp nhập tình mạnh', link: '/sap-nhap-tinh-manh' },
+    ],
+    logo: 'https://static.znews.vn/images/stat.svg',
+  },
+  topNews: {
+    mainArticle: {
+      article: {
+        id: 'main-article',
+        title: 'Main Article Title',
+        description: 'This is the main article description.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/main-article',
+      },
+      suggestedArticles: [
+        {
+          id: 'suggested-1',
+          title: 'Suggested Article 1',
+          description: 'Description for suggested article 1.',
+          image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+          link: '/suggested-1',
+        },
+        {
+          id: 'suggested-2',
+          title: 'Suggested Article 2',
+          description: 'Description for suggested article 2.',
+          image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+          link: '/suggested-2',
+        },
+      ],
+    },
+    sideArticles: [
+      {
+        id: 'side-1',
+        title: 'Side Article 1',
+        description: 'Description for side article 1.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/side-1',
+      },
+      {
+        id: 'side-2',
+        title: 'Side Article 2',
+        description: 'Description for side article 2.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/side-2',
+      },
+    ],
+    secondaryArticles: [
+      {
+        id: 'secondary-1',
+        title: 'Secondary Article 1',
+        description: 'Description for secondary article 1.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/secondary-1',
+      },
+      {
+        id: 'secondary-2',
+        title: 'Secondary Article 2',
+        description: 'Description for secondary article 2.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/secondary-2',
+      },
+      {
+        id: 'secondary-3',
+        title: 'Secondary Article 3',
+        description: 'Description for secondary article 3.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/secondary-3',
+      },
+      {
+        id: 'secondary-4',
+        title: 'Secondary Article 4',
+        description: 'Description for secondary article 4.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/secondary-4',
+      },
+      {
+        id: 'secondary-5',
+        title: 'Secondary Article 5',
+        description: 'Description for secondary article 5.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/secondary-5',
+      },
+    ],
+  },
+  books: [
+    {
+      id: 'book-1',
+      title: 'Book Title 1',
+      description: 'Description for book 1.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-1',
+    },
+    {
+      id: 'book-2',
+      title: 'Book Title 2',
+      description: 'Description for book 2.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-2',
+    },
+    {
+      id: 'book-3',
+      title: 'Book Title 3',
+      description: 'Description for book 3.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-3',
+    },
+
+    {
+      id: 'book-4',
+      title: 'Book Title 4',
+      description: 'Description for book 4.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-4',
+    },
+    {
+      id: 'book-5',
+      title: 'Book Title 5',
+      description: 'Description for book 5.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-5',
+    },
+    {
+      id: 'book-6',
+      title: 'Book Title 6',
+      description: 'Description for book 6.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-6',
+    },
+    {
+      id: 'book-7',
+      title: 'Book Title 7',
+      description: 'Description for book 7.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-7',
+    },
+    {
+      id: 'book-8',
+      title: 'Book Title 8',
+      description: 'Description for book 8.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-8',
+    },
+    {
+      id: 'book-9',
+      title: 'Book Title 9',
+      description: 'Description for book 9.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-9',
+    },
+    {
+      id: 'book-10',
+      title: 'Book Title 10',
+      description: 'Description for book 10.',
+      image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+      link: '/book-10',
+    },
+  ],
+  multimedia: {
+    navigation: [
+      { title: 'Videos', link: '/videos' },
+      { title: 'Podcasts', link: '/podcasts' },
+      { title: 'Longform', link: '/longform' },
+      { title: 'Story', link: '/story' },
+      { title: 'Quizz', link: '/quizz' },
+    ],
+    articles: [
+      {
+        id: 'multimedia-1',
+        title: 'Multimedia Article 1',
+        description: 'Description for multimedia article 1.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/multimedia-1',
+      },
+      {
+        id: 'multimedia-2',
+        title: 'Multimedia Article 2',
+        description: 'Description for multimedia article 2.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/multimedia-2',
+      },
+      {
+        id: 'multimedia-3',
+        title: 'Multimedia Article 3',
+        description: 'Description for multimedia article 3.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/multimedia-3',
+      },
+      {
+        id: 'multimedia-4',
+        title: 'Multimedia Article 4',
+        description: 'Description for multimedia article 4.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/multimedia-4',
+      },
+      {
+        id: 'multimedia-5',
+        title: 'Multimedia Article 5',
+        description: 'Description for multimedia article 5.',
+        image: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/multimedia-5',
+      },
+    ],
+  },
+};
+
+export default homepageData;

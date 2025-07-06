@@ -25,7 +25,7 @@ export const MobileMenu = ({ data, footerData }: { data: NavItem[]; footerData: 
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="!pt-10 w-full flex flex-col justify-between">
+        <div className="!pt-10 w-full flex flex-col justify-between relative h-full !pb-10">
           <div className="max-w-[420px] max-h-[320px] overflow-auto !mx-auto">
             <ul className="gap-8 grid grid-cols-2">
               {data?.map((item) => (
@@ -41,7 +41,7 @@ export const MobileMenu = ({ data, footerData }: { data: NavItem[]; footerData: 
             </ul>
           </div>
           {/* Copy right */}
-          <div className="flex flex-col items-center !text-[#444] !py-5 w-full text-[12px]">
+          <div className="flex flex-col items-center !text-[#444] !py-5 w-full text-[12px] absolute bottom-[50px] left-0 right-0">
             <div className="text-center" dangerouslySetInnerHTML={{ __html: main }}></div>
             <div className="flex flex-col gap-0 flex-1 text-center">
               <div>

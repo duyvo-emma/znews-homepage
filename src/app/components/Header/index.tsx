@@ -1,10 +1,11 @@
 import { Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Header as HeaderType } from '../../types/common/header';
 import { HeaderSearch } from '../HeaderSearch';
 import NavMore from '../NavMore';
 
-export const Header = ({ data }: { data: Header }) => {
+export const Header = ({ data }: { data: HeaderType }) => {
   const { logo, navItems, extraNavItems, extraChannels } = data;
   return (
     <header

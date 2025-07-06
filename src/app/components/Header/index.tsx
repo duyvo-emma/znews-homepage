@@ -21,7 +21,7 @@ const DesktopHeader = ({ data }: { data: HeaderType }) => {
       </Link>
       <nav className="hidden lg:flex flex-1 justify-center gap-2">
         <ul className="flex items-center justify-center flex-wrap">
-          {navItems.map((item) => (
+          {navItems?.map((item) => (
             <li key={item.id} className="inline-block !mr-4">
               <Link
                 href={item.link}

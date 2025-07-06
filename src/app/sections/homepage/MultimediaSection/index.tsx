@@ -15,7 +15,7 @@ const Navigation = ({
 }) => {
   return (
     <div className={clsx('hidden lg:flex gap-[30px] items-center', className)}>
-      {navigation.map((navItem, index) => (
+      {navigation?.map((navItem, index) => (
         <Link
           key={index}
           href={navItem.link}
@@ -86,7 +86,7 @@ export const MultimediaSection = ({
               {firstArticle.description}
             </p>
           </div>
-          {restArticles.map((article, index) => (
+          {restArticles?.map((article, index) => (
             <MultimediaCard key={index} data={article} className="" />
           ))}
         </div>

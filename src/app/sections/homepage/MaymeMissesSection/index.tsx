@@ -42,7 +42,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
             <p className="text-sm !text-[#444]">{firstArticle.description}</p>
           </article>
           <div className="flex-1 w-full md:w-auto flex flex-row md:flex-col gap-6">
-            {twoSideArticle.map((article, index) => (
+            {twoSideArticle?.map((article, index) => (
               <article key={index} aria-label="article" className="flex flex-col gap-4">
                 <Link href={article.link} className="w-full max-h-[160px] relative">
                   <Image
@@ -60,7 +60,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[28px] lg:flex-1 lg:flex lg:flex-col lg:!pl-6 lg:!ml-6 lg:border-l-[1px] lg:border-[#eee]">
-          {restArticles.map((article, index) => (
+          {restArticles?.map((article, index) => (
             <article
               key={index}
               aria-label="article"
@@ -99,7 +99,7 @@ export const MaybeMissesSection = ({ data, className }: SectionProps) => {
   return (
     <>
       <Container maxWidth="lg">
-        {data.map((section) => (
+        {data?.map((section) => (
           <Section key={section.id} data={section} />
         ))}
       </Container>

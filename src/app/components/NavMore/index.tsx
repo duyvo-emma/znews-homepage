@@ -42,7 +42,7 @@ const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
         >
           <Container maxWidth="lg" className="flex flex-col gap-8 items-center !py-6">
             <ul className="p-2 mx-auto max-w-[865px] grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 w-full">
-              {extraNavItems.map((item) => (
+              {extraNavItems?.map((item) => (
                 <li
                   key={item.id}
                   className={clsx('px-4 py-2 text-white font-bold', styles.navMore_item)}
@@ -55,7 +55,7 @@ const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
           <div className="bg-[#333240] w-full">
             <Container maxWidth="lg" className="flex flex-col gap-8 items-center">
               <ul className="flex flex-row items-center justify-between w-full !py-[18px]">
-                {extraChannels.map((item) => (
+                {extraChannels?.map((item) => (
                   <li key={item.id} className="px-4 py-2 flex items-center gap-2">
                     <a href={item.link}>
                       <div className="min-h-4  h-auto w-auto">

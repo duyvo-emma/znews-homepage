@@ -40,7 +40,7 @@ export const TrendingSearch = ({
                 />
               )}
             </div>
-            {tabs.map((item) => (
+            {tabs?.map((item) => (
               <TrendingTab key={item.id} data={item} />
             ))}
           </div>

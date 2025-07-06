@@ -46,7 +46,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
           </Link>
         </article>
         <div className="flex flex-col gap-2">
-          {restArticles.map((article, index) => (
+          {restArticles?.map((article, index) => (
             <Article
               key={article.id}
               article={article}
@@ -57,7 +57,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
       </div>
       {/* Mobile */}
       <div className="flex lg:hidden flex-col">
-        {articles.map((article, index) => (
+        {articles?.map((article, index) => (
           <Article key={article.id} article={article} isLast={index === articles.length - 1} />
         ))}
       </div>
@@ -76,7 +76,7 @@ export const BoxCategoriesSection = ({
     <Container maxWidth="lg">
       <div className="border-t-[2px] border-[#333] !mt-10 !mb-5 !pt-5">
         <div className="grid grid-cols-1 min-[500px]:grid-cols-2 gap-4 lg:grid-cols-4">
-          {data.map((section) => (
+          {data?.map((section) => (
             <Section key={section.id} data={section} />
           ))}
         </div>

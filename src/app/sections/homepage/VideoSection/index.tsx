@@ -34,7 +34,7 @@ const DesktopVideoList = ({ data, className }: { data: Video[]; className?: stri
         className
       )}
     >
-      {data.map((item) => (
+      {data?.map((item) => (
         <VideoCard key={item.id} data={item} />
       ))}
     </section>
@@ -50,7 +50,7 @@ const MobileVideoList = ({ data, className }: { data: Video[]; className?: strin
         className
       )}
     >
-      {first4videos.map((item) => (
+      {first4videos?.map((item) => (
         <VideoCard key={item.id} data={item} />
       ))}
     </section>

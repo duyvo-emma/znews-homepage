@@ -22,7 +22,7 @@ export const MagazineSection = ({ data, className }: SectionProps) => {
           </Link>
         </div>
         <BaseSlider slidesToShow={4} slidesToScroll={4}>
-          {articles.map((item) => (
+          {articles?.map((item) => (
             <MagazineCard key={item.id} data={item} className="" />
           ))}
         </BaseSlider>

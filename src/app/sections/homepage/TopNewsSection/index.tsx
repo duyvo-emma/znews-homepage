@@ -8,7 +8,7 @@ import { MainArticleProps, TopNewsSectionProps } from '../../../types/pages/home
 const NewsTrendingSection = ({ data, className }: { data: Article[]; className?: string }) => {
   return (
     <div id="news-trending" className={className}>
-      {data.map((article, index) => (
+      {data?.map((article, index) => (
         <article
           key={index}
           className={clsx(
@@ -75,7 +75,7 @@ const MainArticleSection = ({
       </article>
       {/* Suggested Articles */}
       <ul className="flex-col gap-1 list-disc pl-5 hidden lg:flex">
-        {suggestedArticles.map((article, index) => (
+        {suggestedArticles?.map((article, index) => (
           <li key={index}>
             <Link
               aria-label={`suggested-article-${index}`}
@@ -94,7 +94,7 @@ const MainArticleSection = ({
 const SideNewsSection = ({ data, className }: { data: Article[]; className?: string }) => {
   return (
     <div className={clsx(className, 'flex flex-row lg:flex-col gap-6 w-full flex-wrap')}>
-      {data.map((article, index) => (
+      {data?.map((article, index) => (
         <article key={index} className="flex gap-2 flex-col flex-1">
           <Link aria-label="side-article-thumbnail" href={article.link}>
             <div className="w-full h-[171px] relative">

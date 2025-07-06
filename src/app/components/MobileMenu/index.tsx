@@ -25,7 +25,7 @@ export const MobileMenu = ({ data, footerData }: { data: NavItem[]; footerData: 
         <div className="!pt-10 w-full flex flex-col justify-between">
           <div className="max-w-[420px] max-h-[320px] overflow-auto !mx-auto">
             <ul className="gap-8 grid grid-cols-2">
-              {data.map((item) => (
+              {data?.map((item) => (
                 <li key={item.id} className="text-center">
                   <Link
                     href={item.link}

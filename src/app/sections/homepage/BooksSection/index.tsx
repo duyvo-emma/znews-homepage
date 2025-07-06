@@ -39,7 +39,7 @@ export const BooksSection = ({ data, className }: { data: Article[]; className?:
           </Link>
         </div>
         <BaseSlider slidesToShow={5} slidesToScroll={5}>
-          {data.map((item) => (
+          {data?.map((item) => (
             <BookCard key={item.id} data={item} className="" />
           ))}
         </BaseSlider>

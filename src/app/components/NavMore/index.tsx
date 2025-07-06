@@ -4,27 +4,15 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
+import { NavItem } from '../../types/common/header';
+import { CloseIcon } from '../icons/Close';
+import { ThreeDotsIcon } from '../icons/ThreeDots';
 import styles from './index.module.scss';
 
 interface NavMoreProps {
   extraNavItems: NavItem[];
   extraChannels: NavItem[];
 }
-
-const ThreeDotsIcon = () => (
-  <svg width="24" height="24" fill="black" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-    <circle cx="4" cy="12" r="1.5" />
-    <circle cx="12" cy="12" r="1.5" />
-    <circle cx="20" cy="12" r="1.5" />
-  </svg>
-);
-
-const CloseIcon = () => (
-  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-    <line x1="6" y1="6" x2="18" y2="18" />
-    <line x1="6" y1="18" x2="18" y2="6" />
-  </svg>
-);
 
 const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
   const [navOpen, setNavOpen] = useState(false);
@@ -53,7 +41,7 @@ const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
           )}
         >
           <Container maxWidth="lg" className="flex flex-col gap-8 items-center !py-6">
-            <ul className="p-2 mx-auto max-w-[865px] grid grid-cols-4 gap-x-4 gap-y-6 w-full">
+            <ul className="p-2 mx-auto max-w-[865px] grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 w-full">
               {extraNavItems.map((item) => (
                 <li
                   key={item.id}

@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
 import './globals.css';
 import { getFooterData, getHeaderData } from './lib/api';
 
@@ -16,7 +17,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen items-center bg-white">
-        <Header data={headerData} />
+        <Header data={headerData} footerData={footerData} />
 
         <Container
           maxWidth={false}
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }) {
         </Container>
 
         <Footer data={footerData} />
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -143,18 +144,20 @@ export const TopNewsSection = ({
   const { mainArticle, sideArticles, secondaryArticles } = data;
 
   return (
-    <section
-      id="top-news"
-      className={clsx(
-        className,
-        'bg-white !mt-4 w-full flex flex-col-reverse sm:flex-row-reverse lg:flex-row gap-5'
-      )}
-    >
-      <NewsTrendingSection
-        className="w-full sm:w-[45%] lg:w-[30%] !pt-[30px] border-t-[1px] border-[#ddd] sm:border-0 sm:!pt-0"
-        data={secondaryArticles}
-      />
-      <FeaturedNewsSection className="flex-1" data={{ mainArticle, sideArticles }} />
-    </section>
+    <Container maxWidth="lg">
+      <section
+        id="top-news"
+        className={clsx(
+          className,
+          'bg-white !my-4 w-full flex flex-col-reverse sm:flex-row-reverse lg:flex-row gap-5'
+        )}
+      >
+        <NewsTrendingSection
+          className="w-full sm:w-[45%] lg:w-[30%] !pt-[30px] border-t-[1px] border-[#ddd] sm:border-0 sm:!pt-0"
+          data={secondaryArticles}
+        />
+        <FeaturedNewsSection className="flex-1" data={{ mainArticle, sideArticles }} />
+      </section>
+    </Container>
   );
 };

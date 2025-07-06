@@ -16,7 +16,11 @@ export default async function RootLayout({ children }) {
       <body className="flex flex-col min-h-screen items-center bg-white">
         <Header data={headerData} />
 
-        <Container maxWidth="lg" sx={{ backgroundColor: '#fff', minHeight: '100vh', mt: 8 }}>
+        <Container
+          maxWidth={false}
+          sx={{ backgroundColor: '#fff', minHeight: '100vh', mt: 8 }}
+          className="!px-0"
+        >
           {children}
         </Container>
 

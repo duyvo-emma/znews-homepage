@@ -1,0 +1,12 @@
+.magazine {
+  &_title {
+    & ::before {
+      content: '';
+      display: block;
+      background: #ffde76;
+      width: 50px;
+      height: 5px;
+      margin: 0 auto 15px;
+    }
+  }
+}

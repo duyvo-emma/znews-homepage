@@ -1,11 +1,12 @@
 'use client';
+import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import { ArrowIcon } from '../../../components/icons/Arrow';
+import { BaseSlider } from '../../../components/Slider';
 
 const BookCard = ({ data, className }: { data: Article; className?: string }) => {
   const { title, image, link } = data;
@@ -56,48 +57,19 @@ const CustomPrevArrow = (props: any) => {
 
 export const BooksSection = ({ data, className }: { data: Article[]; className?: string }) => {
   return (
-    <section id="books" className={clsx(className, '!mb-10')}>
-      <div className="section-header">
-        <Link href="/books" className="section-heading uppercase">
-          Books
-        </Link>
-      </div>
-      <Slider
-        arrows={true}
-        infinite={false}
-        speed={500}
-        slidesToShow={5}
-        slidesToScroll={5}
-        nextArrow={<CustomNextArrow />}
-        prevArrow={<CustomPrevArrow />}
-        responsive={[
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-            },
-          },
-          {
-            breakpoint: 667,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-            },
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ]}
-      >
-        {data.map((article) => (
-          <BookCard key={article.id} data={article} className="" />
-        ))}
-      </Slider>
-    </section>
+    <Container maxWidth="lg">
+      <section id="books" className={clsx(className, '!mb-10')}>
+        <div className="section-header">
+          <Link href="/books" className="section-heading uppercase">
+            Books
+          </Link>
+        </div>
+        <BaseSlider slidesToShow={5} slidesToScroll={5}>
+          {data.map((item) => (
+            <BookCard key={item.id} data={item} className="" />
+          ))}
+        </BaseSlider>
+      </section>
+    </Container>
   );
 };

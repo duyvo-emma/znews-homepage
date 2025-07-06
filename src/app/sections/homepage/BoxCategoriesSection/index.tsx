@@ -75,7 +75,7 @@ export const BoxCategoriesSection = ({
   return (
     <Container maxWidth="lg">
       <div className="border-t-[2px] border-[#333] !mt-10 !mb-5 !pt-5">
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-1 min-[500px]:grid-cols-2 gap-4 lg:grid-cols-4">
           {data.map((section) => (
             <Section key={section.id} data={section} />
           ))}

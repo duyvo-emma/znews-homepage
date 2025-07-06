@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import usePreventScroll from '../../hooks/usePreventScroll';
 import { Footer } from '../../types/common/footer';
 import { NavItem } from '../../types/common/header';
 import { BurgerIcon } from '../icons/Burger';
@@ -10,6 +11,8 @@ import { CloseIcon } from '../icons/Close';
 export const MobileMenu = ({ data, footerData }: { data: NavItem[]; footerData: Footer }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { main, address, hotline, email } = footerData;
+
+  usePreventScroll(isOpen);
 
   return (
     <>

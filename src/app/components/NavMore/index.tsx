@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
+import usePreventScroll from '../../hooks/usePreventScroll';
 import { NavItem } from '../../types/common/header';
 import { CloseIcon } from '../icons/Close';
 import { ThreeDotsIcon } from '../icons/ThreeDots';
@@ -19,6 +20,7 @@ const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useClickOutside(containerRef, () => setNavOpen(false));
+  usePreventScroll(navOpen);
 
   return (
     <div ref={containerRef}>
@@ -30,6 +32,13 @@ const NavMore = ({ extraNavItems, extraChannels }: NavMoreProps) => {
       >
         {navOpen ? <CloseIcon /> : <ThreeDotsIcon />}
       </button>
+
+      {navOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-30 z-40 top-[52px]"
+          onClick={() => setNavOpen(false)}
+        />
+      )}
 
       {navOpen && (
         <div

@@ -54,7 +54,7 @@ export const HeaderSearch = () => {
               className="fixed inset-0 bg-black opacity-40 z-100 top-[52px]"
               onClick={() => setIsSearchOpen(false)}
             />
-            <div className="fixed top-[50px] left-0 w-full z-110 p-4">
+            <div className="fixed top-[52px] left-0 w-full z-110 p-4">
               <TextField
                 fullWidth
                 autoFocus

@@ -11,3 +11,10 @@ export async function getHeaderData() {
   });
   return res.json();
 }
+
+export async function getFooterData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/footer`, {
+    cache: 'no-store',
+  });
+  return res.json();
+}

@@ -10,5 +10,9 @@
     right: -30px;
     bottom: 0px;
     background: #ffde76;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 }

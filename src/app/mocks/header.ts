@@ -1,3 +1,5 @@
+import { Header } from '../types/common/header';
+
 const headerData: Header = {
   logo: 'https://static.znews.vn/images/logo-znews-light-2.svg',
   navItems: [

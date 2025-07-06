@@ -1,15 +1,17 @@
 import { Container } from '@mui/material';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import './globals.css';
-import { getHeaderData } from './lib/api';
+import { getFooterData, getHeaderData } from './lib/api';
 
 export const metadata = {
-  title: 'My App',
-  description: 'Base layout for app',
+  title: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
+  description: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
 };
 
 export default async function RootLayout({ children }) {
   const headerData = await getHeaderData();
+  const footerData = await getFooterData();
 
   return (
     <html lang="en">
@@ -24,9 +26,7 @@ export default async function RootLayout({ children }) {
           {children}
         </Container>
 
-        <footer className="bg-gray-900 text-gray-300 p-4 text-center w-full">
-          © {new Date().getFullYear()} MyApp. All rights reserved.
-        </footer>
+        <Footer data={footerData} />
       </body>
     </html>
   );

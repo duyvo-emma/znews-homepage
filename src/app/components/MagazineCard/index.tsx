@@ -16,7 +16,7 @@ export const MagazineCard = ({ className, data }: { className?: string; data: Ar
           fill
           className="top-0 bottom-0 left-0 right-0 object-cover brightness-50 transition-transform duration-500 group-hover:scale-110"
         />
-        <span className="absolute z-2 top-0 -translate-x-1/2 left-1/2 bg-[#ffde76] rounded-b-sm text-sm font-bold !px-4 !py-1">
+        <span className="absolute z-2 top-0 -translate-x-1/2 left-1/2 bg-[#ffde76] rounded-b-sm text-sm font-bold !px-4 !py-1 text-center">
           {category}
         </span>
         <div

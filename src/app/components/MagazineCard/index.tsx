@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Article } from '../../types/common/articles';
 import { NewsIcon } from '../icons/News';
 import styles from './index.module.scss';
 

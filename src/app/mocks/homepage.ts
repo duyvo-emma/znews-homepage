@@ -1,3 +1,5 @@
+import { HomePageProps } from '../types/pages/homepage';
+
 const homepageData: HomePageProps = {
   topBanner: {
     tabs: [
@@ -1158,6 +1160,93 @@ const homepageData: HomePageProps = {
         link: '/magazine/8',
         category: 'Category 1',
         publishedAt: new Date('2025-07-01 09:00:00'),
+      },
+    ],
+  },
+  videos: {
+    id: 'videos',
+    title: 'Video',
+    link: '/video',
+    videos: [
+      {
+        id: 'video-1',
+        title: 'Video 1',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/1',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-2',
+        title: 'Video 2',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/2',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-3',
+        title: 'Video 3',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/3',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-4',
+        title: 'Video 4',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/4',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-5',
+        title: 'Video 5',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/5',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-6',
+        title: 'Video 6',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/6',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-7',
+        title: 'Video 7',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/7',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
+      },
+      {
+        id: 'video-8',
+        title: 'Video 8',
+        thumbnail: 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg',
+        link: '/video/8',
+        videoURL:
+          'https://video.znews.vn/c358b2bb9221c99c990b3be00934a5bc/686a2d82/2025_07_03/chientm/VID_MY.mp4',
+        publishedAt: new Date('2025-07-01 09:00:00'),
+        category: 'Category 1',
       },
     ],
   },

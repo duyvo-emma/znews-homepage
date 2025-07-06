@@ -1,9 +1,5 @@
-interface Article {
-  id: string;
-  title: string;
-  category?: string;
+import { Post } from './base';
+
+export interface Article extends Post {
   description?: string;
-  image?: string;
-  link: string;
-  publishedAt?: Date;
 }

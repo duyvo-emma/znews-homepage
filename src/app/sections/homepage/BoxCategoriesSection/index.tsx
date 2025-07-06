@@ -2,8 +2,10 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Article as ArticleType } from '../../../types/common/articles';
+import { BoxCategoryProps } from '../../../types/pages/homepage';
 
-const Article = ({ article, isLast }: { article: Article; isLast?: boolean }) => {
+const Article = ({ article, isLast }: { article: ArticleType; isLast?: boolean }) => {
   const { id, title, description, image, link } = article;
   return (
     <article className={clsx('flex gap-2  !pb-4 !mb-4', !isLast && 'border-b-[1px] border-[#ddd]')}>

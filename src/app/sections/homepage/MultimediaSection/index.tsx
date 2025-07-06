@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { MultimediaSectionProps } from '../../../types/pages/homepage';
 import styles from './index.module.scss';
 
 const Navigation = ({

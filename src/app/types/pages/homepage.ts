@@ -1,4 +1,8 @@
-interface HomePageProps {
+import { Article } from '../common/articles';
+import { TopBannerProps } from '../common/trendingSearch';
+import { Video } from '../common/video';
+
+export interface HomePageProps {
   topBanner?: TopBannerProps;
   topNews: TopNewsSectionProps;
   books: Article[];
@@ -10,20 +14,21 @@ interface HomePageProps {
   maybeMisses: BoxCategoryProps[];
   boxCategory: BoxCategoryProps[];
   magazines: MagazineSectionProps;
+  videos: VideoSectionProps;
 }
 
-interface TopNewsSectionProps {
+export interface TopNewsSectionProps {
   mainArticle: MainArticleProps;
   sideArticles: Article[];
   secondaryArticles: Article[];
 }
 
-interface MainArticleProps {
+export interface MainArticleProps {
   article: Article;
   suggestedArticles: Article[];
 }
 
-interface MultimediaSectionProps {
+export interface MultimediaSectionProps {
   navigation: {
     title: string;
     link: string;
@@ -31,28 +36,35 @@ interface MultimediaSectionProps {
   articles: Article[];
 }
 
-interface PodcastSectionProps {
+export interface PodcastSectionProps {
   logo?: string;
   link: string;
   list: Article[];
 }
 
-interface SponsorSectionProps {
+export interface SponsorSectionProps {
   background?: string;
   link?: string;
   posts: Article[];
 }
 
-interface BoxCategoryProps {
+export interface BoxCategoryProps {
   id: string;
   title: string;
   link: string;
   articles: Article[];
 }
 
-interface MagazineSectionProps {
+export interface MagazineSectionProps {
   id: string;
   title: string;
   link: string;
   articles: Article[];
+}
+
+export interface VideoSectionProps {
+  id: string;
+  title: string;
+  link: string;
+  videos: Video[];
 }

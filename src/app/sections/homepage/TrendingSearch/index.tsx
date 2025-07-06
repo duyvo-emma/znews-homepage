@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { TopBannerProps, TrendingSearchItem } from '../../../types/common/trendingSearch';
 import styles from './index.module.scss';
 
 const TrendingTab = ({ data }: { data: TrendingSearchItem }) => {

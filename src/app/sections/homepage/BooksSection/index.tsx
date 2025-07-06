@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import { ArrowIcon } from '../../../components/icons/Arrow';
 import { BaseSlider } from '../../../components/Slider';
+import { Article } from '../../../types/common/articles';
 
 const BookCard = ({ data, className }: { data: Article; className?: string }) => {
   const { title, image, link } = data;
@@ -26,32 +26,6 @@ const BookCard = ({ data, className }: { data: Article; className?: string }) =>
         </Link>
       </div>
     </article>
-  );
-};
-
-const CustomNextArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      className="absolute overflow-hidden cursor-pointer right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-100"
-      aria-label="Next"
-    >
-      <ArrowIcon className="w-6 h-6 text-gray-600" />
-    </button>
-  );
-};
-
-const CustomPrevArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      className="absolute overflow-hidden cursor-pointer left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-100"
-      aria-label="Previous"
-    >
-      <ArrowIcon className="w-6 h-6 text-gray-600 rotate-180" />
-    </button>
   );
 };
 

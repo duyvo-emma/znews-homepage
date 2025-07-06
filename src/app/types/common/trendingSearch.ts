@@ -1,10 +1,10 @@
-interface TrendingSearchItem {
+export interface TrendingSearchItem {
   id: string;
   title: string;
   link: string;
 }
 
-interface TopBannerProps {
+export interface TopBannerProps {
   tabs?: TrendingSearchItem[];
   logo?: string;
 }

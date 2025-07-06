@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import Link from 'next/link';
 import { MagazineCard } from '../../../components/MagazineCard';
 import { BaseSlider } from '../../../components/Slider';
+import { MagazineSectionProps } from '../../../types/pages/homepage';
 
 type SectionProps = {
   data: MagazineSectionProps;

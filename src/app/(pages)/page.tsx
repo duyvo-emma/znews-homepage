@@ -7,6 +7,7 @@ import { MaybeMissesSection } from '../sections/homepage/MaymeMissesSection';
 import { MultimediaSection } from '../sections/homepage/MultimediaSection';
 import { TopNewsSection } from '../sections/homepage/TopNewsSection';
 import { TrendingSearch } from '../sections/homepage/TrendingSearch';
+import { VideoSection } from '../sections/homepage/VideoSection';
 
 export default async function Home() {
   const homepageData = await getHomePageData();
@@ -21,6 +22,7 @@ export default async function Home() {
     sponsor,
     maybeMisses,
     magazines,
+    videos,
   } = homepageData;
 
   return (
@@ -33,6 +35,7 @@ export default async function Home() {
       <MaybeMissesSection data={maybeMisses} />
       <BoxCategoriesSection data={homepageData.boxCategory} />
       <MagazineSection data={magazines} />
+      <VideoSection data={videos} />
     </main>
   );
 }

@@ -6,7 +6,7 @@ import { getFooterData, getHeaderData } from './lib/api';
 
 export const metadata = {
   title: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
-  description: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
+  favicon: 'https://static.znews.vn/favicon/v005/app_57x57.png',
 };
 
 export default async function RootLayout({ children }) {

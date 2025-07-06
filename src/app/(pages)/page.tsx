@@ -9,6 +9,11 @@ import { TopNewsSection } from '../sections/homepage/TopNewsSection';
 import { TrendingSearch } from '../sections/homepage/TrendingSearch';
 import { VideoSection } from '../sections/homepage/VideoSection';
 
+export const metadata = {
+  title: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
+  description: 'Znews - Thông tin uy tín, hình ảnh ấn tượng - ZNEWS.VN',
+};
+
 export default async function Home() {
   const homepageData = await getHomePageData();
   const {

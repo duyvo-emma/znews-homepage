@@ -1,7 +1,11 @@
+import { Container } from '@mui/material';
+
 export default function ArticlePage({ params }) {
   return (
-    <div>
-      <h1>Article Detail: {params.slug}</h1>
-    </div>
+    <Container maxWidth="lg">
+      <div>
+        <h1>Article Detail: {params.slug}</h1>
+      </div>
+    </Container>
   );
 }

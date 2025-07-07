@@ -93,9 +93,14 @@ const MainArticleSection = ({
 
 const SideNewsSection = ({ data, className }: { data: Article[]; className?: string }) => {
   return (
-    <div className={clsx(className, 'flex flex-row lg:flex-col gap-6 w-full flex-wrap')}>
+    <div
+      className={clsx(
+        className,
+        'grid grid-cols-2 lg:flex flex-row lg:flex-col gap-6 w-full flex-wrap'
+      )}
+    >
       {data?.map((article, index) => (
-        <article key={index} className="flex gap-2 flex-col flex-1">
+        <article key={index} className="flex gap-2 flex-col">
           <Link aria-label="side-article-thumbnail" href={article.link}>
             <div className="w-full h-[171px] relative">
               <Image
@@ -131,7 +136,7 @@ const FeaturedNewsSection = ({
   return (
     <div id="featured-news" className={clsx(className, 'flex gap-5 flex-col lg:flex-row')}>
       <MainArticleSection mainNews={mainNews} suggestedArticles={suggestedArticles} />
-      <SideNewsSection data={sideArticles} className="flex-1 flex flex-col gap-4" />
+      <SideNewsSection data={sideArticles} className="lg:max-w-[250px]" />
     </div>
   );
 };

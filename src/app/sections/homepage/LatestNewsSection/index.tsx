@@ -69,7 +69,7 @@ const MostRead = ({ data, className }: { data: Article[]; className?: string }) 
           <div key={index} className="flex gap-3">
             <Link
               href={article.link}
-              className="block w-[72px] h-[72px] rounded-lg overflow-hidden"
+              className="block w-[72px] h-[72px] min-w-[72px] min-h-[72px] rounded-lg overflow-hidden"
             >
               <Image
                 src={article.image}
@@ -78,7 +78,7 @@ const MostRead = ({ data, className }: { data: Article[]; className?: string }) 
                 className="w-full h-full object-cover !relative"
               />
             </Link>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
               <p className="text-[10px] text-[#5c5c5c] uppercase">{article.category}</p>
               <Link
                 href={article.link}
@@ -108,10 +108,10 @@ const PodcastSection = ({ data, className }: { data: PodcastSectionProps; classN
         <Link href={link} className="h-[18px] w-auto !mb-4">
           <Image src={logo} alt="podcast" fill className="w-full h-full object-contain !relative" />
         </Link>
-        <div className="w-full flex flex-col gap-[10px] items-center !mb-4 !pb-4 border-b border-[#ffffff1a]">
+        <div className="w-full flex flex-col gap-3 items-center !mb-4 !pb-4 border-b border-[#ffffff1a]">
           <Link
             href={firstNews?.link}
-            className="block w-[250px] h-[166px] rounded-sm overflow-hidden"
+            className="block w-full h-[166px] rounded-sm overflow-hidden"
           >
             <Image
               fill
@@ -122,7 +122,7 @@ const PodcastSection = ({ data, className }: { data: PodcastSectionProps; classN
           </Link>
           <Link
             href={firstNews?.link}
-            className="!text-white hover:!text-[#006BA0] block font-bold"
+            className="!text-white hover:!text-[#006BA0] block font-bold text-center"
           >
             {firstNews?.title}
           </Link>
@@ -170,10 +170,10 @@ const SponsorSection = ({ data, className }: { data: SponsorSectionProps; classN
       className={clsx('block !pt-[150px]', styles.latestNews_sponsor)}
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="flex flex-col gap-4 w-full items-center">
+      <div className="flex flex-col gap-4 w-full items-center !px-4 !pt-10">
         <Link
           href={firstPost?.link}
-          className="w-[270px] h-[180px] relative rounded-sm overflow-hidden block"
+          className="w-full h-[180px] relative rounded-sm overflow-hidden block"
         >
           <Image
             fill
@@ -187,10 +187,10 @@ const SponsorSection = ({ data, className }: { data: SponsorSectionProps; classN
         </Link>
         <div className="flex gap-4">
           {restPosts?.map((post, index) => (
-            <div key={index} className="flex flex-col gap-2">
+            <div key={index} className="flex flex-col gap-2 w-full">
               <Link
                 href={post?.link}
-                className="w-[128px] h-[85px] relative rounded-sm overflow-hidden block"
+                className="w-full h-[85px] relative rounded-sm overflow-hidden block"
               >
                 <Image
                   fill
@@ -199,7 +199,7 @@ const SponsorSection = ({ data, className }: { data: SponsorSectionProps; classN
                   className="object-cover w-full h-full !relative"
                 />
               </Link>
-              <Link href={post?.link} className="!text-black text-sm block">
+              <Link href={post?.link} className="!text-black text-sm block line-clamp-3">
                 {post?.title}
               </Link>
             </div>

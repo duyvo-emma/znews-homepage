@@ -21,7 +21,7 @@ export const MagazineCard = ({ className, data }: { className?: string; data: Ar
         </span>
         <div
           className={clsx(
-            'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-0 z-2',
+            'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-0 z-2 w-full',
             styles.magazine_title
           )}
         >

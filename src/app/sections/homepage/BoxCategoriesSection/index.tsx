@@ -30,7 +30,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
       {/* Desktop */}
       <div className="hidden lg:flex flex-col">
         <article className="!mb-4 flex flex-col gap-2 border-b-[1px] border-[#ddd] !pb-4">
-          <Link href={firstArticle.link} className="w-full h-[170p] relative">
+          <Link href={firstArticle.link} className="w-full h-[170px] relative">
             <Image
               src={firstArticle.image}
               alt={firstArticle.title}

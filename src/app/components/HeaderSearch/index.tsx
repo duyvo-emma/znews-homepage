@@ -1,6 +1,7 @@
 'use client';
 import { TextField } from '@mui/material';
 import clsx from 'clsx';
+import { useRouter } from 'next/navigation';
 import { useRef, useState } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
 import { SearchIcon } from '../icons/Search';
@@ -10,6 +11,9 @@ export const HeaderSearch = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useClickOutside(containerRef, () => setIsSearchOpen(false));
+
+  const [query, setQuery] = useState('');
+  const router = useRouter();
 
   return (
     <div ref={containerRef} id="header-search" className="flex items-center gap-2 relative">
@@ -34,6 +38,14 @@ export const HeaderSearch = () => {
             id="filled-basic"
             label="Tìm kiếm"
             variant="filled"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                router.push(`/search?q=${encodeURIComponent(query)}`);
+                setIsSearchOpen(false);
+              }
+            }}
           />
         </div>
       </div>
@@ -62,6 +74,14 @@ export const HeaderSearch = () => {
                 id="filled-basic"
                 label="Tìm kiếm"
                 variant="filled"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    router.push(`/search?q=${encodeURIComponent(query)}`);
+                    setIsSearchOpen(false);
+                  }
+                }}
               />
             </div>
           </>

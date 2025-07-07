@@ -40,7 +40,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
           </article>
           <div className="flex-1 w-full md:w-auto flex flex-row md:flex-col gap-6">
             {twoSideArticle?.map((article, index) => (
-              <article key={index} aria-label="article" className="flex flex-col gap-4">
+              <article key={index} aria-label="article" className="flex flex-col gap-4 flex-1">
                 <Link href={article.link} className="w-full max-h-[160px] relative">
                   <Image
                     src={article.image}
@@ -49,7 +49,10 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
                     className="w-full h-full object-cover !relative"
                   />
                 </Link>
-                <Link className="text-bases font-bold hover:!text-[#006BA0]" href={article.link}>
+                <Link
+                  className="text-bases font-bold hover:!text-[#006BA0] leading-relaxed"
+                  href={article.link}
+                >
                   {article.title}
                 </Link>
               </article>

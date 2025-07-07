@@ -48,7 +48,7 @@ export const MobileMenu = ({ data, footerData }: { data: NavItem[]; footerData: 
             </ul>
           </div>
           {/* Copy right */}
-          <div className="flex flex-col items-center !text-[#444] !py-5 w-full text-[12px] absolute bottom-[50px] left-0 right-0">
+          <div className="flex flex-col items-center !text-[#444] !py-5 w-full text-[12px] absolute bottom-[50px] left-0 right-0 leading-relaxed">
             <div className="text-center" dangerouslySetInnerHTML={{ __html: main }}></div>
             <div className="flex flex-col gap-0 flex-1 text-center">
               <div>

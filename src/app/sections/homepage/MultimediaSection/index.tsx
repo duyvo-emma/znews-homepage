@@ -70,14 +70,14 @@ export const MultimediaSection = ({
 
         <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-5 relative !pb-8">
           <div className="col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col gap-4">
-            <div className="w-full h-[330px]">
+            <Link className="w-full h-[330px]" href={firstArticle.link}>
               <Image
                 fill
                 src={firstArticle.image}
                 alt={firstArticle.title}
                 className="w-full h-full object-cover !relative"
               />
-            </div>
+            </Link>
             <Link
               href={firstArticle.link}
               className="text-black text-2xl hover:!text-[#006BA0] block font-bold text-center lg:text-left"

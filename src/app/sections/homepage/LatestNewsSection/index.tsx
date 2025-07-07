@@ -173,7 +173,7 @@ const SponsorSection = ({ data, className }: { data: SponsorSectionProps; classN
       <div className="flex flex-col gap-4 w-full items-center !px-4 !pt-10">
         <Link
           href={firstPost?.link}
-          className="w-full h-[180px] relative rounded-sm overflow-hidden block"
+          className="w-full h-[210px] relative rounded-sm overflow-hidden block"
         >
           <Image
             fill

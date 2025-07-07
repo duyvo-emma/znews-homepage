@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeaderSection } from '../../../components/HeaderSection';
 import { Article } from '../../../types/common/articles';
 import { MultimediaSectionProps } from '../../../types/pages/homepage';
 import styles from './index.module.scss';
@@ -58,13 +59,14 @@ export const MultimediaSection = ({
   return (
     <Container maxWidth="lg">
       <section id="multimedia" className={clsx(className, styles.multimedia, '!mt-16')}>
-        <div className="section-header !border-0 flex gap-10 items-center relative">
-          <Link href="/books" className="section-heading uppercase">
-            Multimedia
-          </Link>
-
+        <HeaderSection
+          title="Multimedia"
+          hasUnderline={false}
+          className="flex gap-10 items-center relative"
+          link="/multimedia"
+        >
           <Navigation navigation={navigation} />
-        </div>
+        </HeaderSection>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-5 relative !pb-8">
           <div className="col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col gap-4">

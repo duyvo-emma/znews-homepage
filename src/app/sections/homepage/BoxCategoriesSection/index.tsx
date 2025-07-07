@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeaderSection } from '../../../components/HeaderSection';
 import { Article as ArticleType } from '../../../types/common/articles';
 import { BoxCategoryProps } from '../../../types/pages/homepage';
 
@@ -25,11 +26,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
   const restArticles = articles.slice(1);
   return (
     <div id={id} className={clsx('', className)}>
-      <div className="section-header !border-none !mb-2">
-        <Link href={link} className="section-heading uppercase">
-          {title}
-        </Link>
-      </div>
+      <HeaderSection link={link} title={title} className="!mb-2" hasUnderline={false} />
       {/* Desktop */}
       <div className="hidden lg:flex flex-col">
         <article className="!mb-4 flex flex-col gap-2 border-b-[1px] border-[#ddd] !pb-4">

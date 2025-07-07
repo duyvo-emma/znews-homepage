@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeaderSection } from '../../../components/HeaderSection';
 import { BoxCategoryProps } from '../../../types/pages/homepage';
 import { getTimeDistanceFromNow } from '../../../utils/datetime';
 
@@ -17,11 +18,7 @@ const Section = ({ data, className }: { data: BoxCategoryProps; className?: stri
   const restArticles = articles.slice(3);
   return (
     <section id={id} className="!mt-10">
-      <div className="section-header">
-        <Link href={link} className="section-heading uppercase">
-          {title}
-        </Link>
-      </div>
+      <HeaderSection link={link} title={title} />
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-[70%] flex flex-col md:flex-row gap-5 !mb-8 lg:!mb-0">
           <article aria-label="article" className="w-full md:w-2/3 flex flex-col gap-4">

@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeaderSection } from '../../../components/HeaderSection';
 import { VideoPlayer } from '../../../components/Video';
 import { Video } from '../../../types/common/video';
 import { VideoSectionProps } from '../../../types/pages/homepage';
@@ -67,11 +68,7 @@ export const VideoSection = ({
   const { videos, title, id, link } = data;
   return (
     <Container id={id} maxWidth="lg" className="!mb-20 hidden md:block">
-      <div className="section-header">
-        <Link href={link} className="section-heading uppercase">
-          {title}
-        </Link>
-      </div>
+      <HeaderSection link={link} title={title} />
       <div className="w-full flex flex-col lg:flex-row gap-0">
         <VideoPlayer className="max-h-[400px]" src={data.videos[0].videoURL} />
         <DesktopVideoList data={videos} />

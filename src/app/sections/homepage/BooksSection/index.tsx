@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import { HeaderSection } from '../../../components/HeaderSection';
 import { BaseSlider } from '../../../components/Slider';
 import { Article } from '../../../types/common/articles';
 
@@ -33,11 +34,7 @@ export const BooksSection = ({ data, className }: { data: Article[]; className?:
   return (
     <Container maxWidth="lg">
       <section id="books" className={clsx(className, '!mb-10')}>
-        <div className="section-header">
-          <Link href="/books" className="section-heading uppercase">
-            Books
-          </Link>
-        </div>
+        <HeaderSection link="/books" title="Books" />
         <BaseSlider slidesToShow={5} slidesToScroll={5}>
           {data?.map((item) => (
             <BookCard key={item.id} data={item} className="" />

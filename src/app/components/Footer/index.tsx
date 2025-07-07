@@ -5,7 +5,7 @@ import { Footer as FooterType } from '../../types/common/footer';
 export const Footer = ({ className, data }: { className?: string; data: FooterType }) => {
   const { main, address, hotline, email } = data;
   return (
-    <footer className="bg-[#f7f7f7] !text-[#888] !py-5 w-full text-[12px]">
+    <footer className="bg-[#f7f7f7] !text-[#888] !py-5 w-full text-[12px] leading-relaxed">
       <Container
         maxWidth="lg"
         className="flex gap-0 items-center sm:items-start flex-col sm:flex-row w-full text-center sm:text-left"
